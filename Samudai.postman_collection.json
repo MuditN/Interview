@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "a3e805a9-4ebc-49e9-9063-92138103a391",
+		"name": "Samudai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11677796"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test2\",\r\n    \"password\": \"StrongPass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/addUser",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Access",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/checkAccess?userId=c3bdddf0-124f-11ed-918d-d97fea4d2fa8&dashboardId=ea0a89c0-1256-11ed-91dd-e9e71c18e961",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"checkAccess"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "c3bdddf0-124f-11ed-918d-d97fea4d2fa8"
+						},
+						{
+							"key": "dashboardId",
+							"value": "ea0a89c0-1256-11ed-91dd-e9e71c18e961"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Dashboard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dashboard_name\": \"dash1\",\r\n    \"user\": \"c3bdddf0-124f-11ed-918d-d97fea4d2fa8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/addDashboard",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"addDashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/healthCheck",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"healthCheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add role to user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dashboard_name\": \"\",\r\n    \"user\": \"\",\r\n    \"roles\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/updateUserRole",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"updateUserRole"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
