@@ -1,0 +1,10 @@
+{
+    "host": "localhost",
+    "port": "8081",
+
+    "user": "postgres",
+    "dbHost": "localhost",
+    "database":  "postgres",
+    "password": "postgres",
+    "dbPort":5432
+}
